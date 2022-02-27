@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        nav {
+            width: 1200px;
+            height: 266px;
+            border: 1px solid #000000;
+            margin: 100px auto;
+            overflow: hidden;
+            
+        }
+
+
+        nav ul {
+            width: 200%;
+            animation: move 8s linear infinite;
+        }
+
+        nav:hover ul {
+            animation-play-state: paused;
+        }
+
+        nav ul li {
+            float: left;
+        }
+
+        @keyframes move {
+            from {
+                transform: translateX(0);
+            }
+
+            to {
+                transform: translatex(-1200px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><img src="picture/单人竖照1.jpg" alt="" width="200px"></li>
+            <li><img src="picture/单人竖照2.jpg" alt="" width="200px"></li>
+            <li><img src="picture/单人竖照3.jpg" alt="" width="200px"></li>
+            <li><img src="picture/单人竖照4.jpg" alt="" width="200px"></li>
+            <li><img src="picture/单人竖照5.jpg" alt="" width="200px"></li>
+            <li><img src="picture/单人竖照6.jpg" alt="" width="200px"></li>
+            <li><img src="picture/单人竖照1.jpg" alt="" width="200px"></li>
+            <li><img src="picture/单人竖照2.jpg" alt="" width="200px"></li>
+            <li><img src="picture/单人竖照3.jpg" alt="" width="200px"></li>
+            <li><img src="picture/单人竖照4.jpg" alt="" width="200px"></li>
+            <li><img src="picture/单人竖照5.jpg" alt="" width="200px"></li>
+            <li><img src="picture/单人竖照6.jpg" alt="" width="200px"></li>
+        </ul>
+    </nav>
+</body>
+
+</html>

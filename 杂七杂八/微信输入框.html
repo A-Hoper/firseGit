@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .dialog {
+            width: 300px;
+            height: 30px;
+            background: #6a6;
+            margin: 50px auto;
+            padding: 10px;
+            line-height: 30px;
+            border-radius: 7px;
+            position: relative;
+        }
+
+        .dialog::before {
+            content: "";
+            border-left: 0px solid #000;
+            border-right: 10px solid #6a6;
+            border-top: 10px solid transparent;
+            border-bottom: 10px solid transparent;
+            position: absolute;
+            left: -10px;
+            top: 50%;
+            transform: translatey(-50%);
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="dialog">
+        hello,world!
+    </div>
+</body>
+
+</html>

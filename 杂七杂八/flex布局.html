@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        .one {
+            width: 500px;
+            height: 100px;
+            background-color: #00a4ff;
+            display: flex;
+            /* align-items: center; */
+            flex-direction: row;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            /* align-items: stretch; */
+            align-content: space-between;
+        }
+
+        .one span {
+            /* width: 100px; */
+            height: 100%;
+            /* margin: 10px; */
+            background-color: pink;
+            text-align: center;
+            /* line-height: 50px; */
+            flex: 2;
+        }
+
+        .one span:nth-child(2n) {
+            background-color: #ff0;
+            flex: 2;
+            order: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="one">
+        <span>1</span>
+        <span>2</span>
+        <span>3</span>
+        <span>4</span>
+        <span>5</span>
+        <span>6</span>
+        <span>7</span>
+        <span>8</span>
+        <span>9</span>
+        <span>10</span>
+    </div>
+</body>
+
+</html>

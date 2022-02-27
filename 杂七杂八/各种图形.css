@@ -1,0 +1,312 @@
+body{
+    background-color: #ccc;
+}
+/* 菱形开始 */
+.diamond {
+    width: 200px;
+    height: 200px;
+    background-color: #00a4ff;
+    border: 1px solid #ccc;
+    margin: 50px auto;
+    -webkit-transform:rotate(45deg);
+    -moz-transform:rotate(45deg);
+    -o-transform:rotate(45deg);
+    -ms-transform:rotate(45deg);
+    transform:rotate(45deg);
+    
+}
+/* 菱形结束 */
+
+/* 六角形开始 */
+.sixstar {
+    width: 0;
+    height: 0;
+    border-bottom: 100px solid red;
+    border-right: 50px solid transparent;
+    border-left: 50px solid transparent;
+    margin: 100px auto;
+    position: relative;
+    animation: goess 2s linear  infinite;
+}
+@keyframes goess {
+    from{
+        transform: rotate(0deg)
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+.sixstar::after {
+    content: "";
+    width: 0;
+    height: 0;
+    border-top: 100px solid red;
+    border-right: 50px solid transparent;
+    border-left: 50px solid transparent;
+    position: absolute;
+    top: 30px;
+    left: -50px;
+}
+/* 六角形结束 */
+
+/* 五边形开始 */
+.five {
+    width:50px;
+    height: 50px;
+    border-top: 54px solid red;
+    border-right: 18px solid transparent;
+    border-left: 18px solid transparent;
+    margin: 100px auto;
+    position: relative;
+}
+.five::after {
+    content: "";
+    width: 0;
+    height: 0;
+    border-left: 43px solid transparent;
+    border-right: 43px solid transparent;
+    border-bottom: 25px solid red;
+    position: absolute;
+    top: -79px;
+    left: -18px;
+}
+/* 五边形结束 */
+
+/* 六边形开始 */
+.six {
+    width: 80px;
+    height: 50px;
+    background-color: red;
+    margin: 100px auto;
+    position: relative;
+}
+.six::before {
+    content: "";
+    width: 0;
+    height: 0;
+    border-left: 40px solid transparent;
+    border-right: 40px solid transparent;
+    border-bottom: 30px solid red;
+    position: absolute;
+    top: -30px;
+    left: 0;
+}
+.six::after {
+    content: "";
+    width: 0;
+    height: 0;
+    border-left: 40px solid transparent;
+    border-right: 40px solid transparent;
+    border-top: 30px solid red;
+    position: absolute;
+    bottom: -30px;
+    left: 0;
+}
+/* 六边形结束 */
+
+/* 心形开始我的方法 */
+.heart1 {
+    width: 50px;
+    height: 80px;
+    background-color: red;
+    border-radius: 50px 50px 0 0;
+    margin: 100px auto;
+    position: relative;
+    /* transform: rotate(-45deg); */
+    /* transition: all 0.5s; */
+    animation: go 2s linear  infinite;
+}
+@keyframes go {
+    from{
+        transform: scale(1,1);
+        transform: rotate(-45deg);
+    }
+    to{
+        transform: scale(2,2);
+    }
+}
+.heart1::after {
+    content: "";
+    width: 80px;
+    height: 50px;
+    background-color: red;
+    border-radius: 0 50px 50px 0;
+    position: absolute;
+    bottom: 0;
+}
+/* 心形结束我的方法 */
+
+/* 心形开始胖哥的方法    胖哥的比较好*/
+.heart2 {
+    width: 100px;
+    height: 100px;
+    animation: goes 2s linear  infinite;
+    margin: 100px auto;
+    position:relative;
+}
+
+.heart2::before {
+    content: "";
+    width: 50px;
+    height: 80px;
+    background-color: red;
+    position: absolute;
+    border-radius: 50px 50px 0 0;
+    transform-origin: 0 100%;
+    transform: rotate(-45deg);
+    left: 50px;
+    top: 5px;
+}
+.heart2::after {
+    content: "";
+    width: 50px;
+    height: 80px;
+    background-color: red;
+    position: absolute;
+    border-radius: 50px 50px 0 0;
+    transform-origin: 100% 100%;
+    transform: rotate(45deg);
+    position: absolute;
+    top: 5px;
+    /* left: -50px; */
+}
+@keyframes goes {
+    from{
+        transform: scale(0.5,0.5);
+    }
+    to{
+        transform: scale(2,2);
+    }
+}
+/* 心形结束胖哥的方法 */
+
+/* 蛋形 */
+.egg {
+    width: 126px;
+    height: 180px;
+    background-color: #fa3;
+    margin: 100px auto;
+    border-radius: 50% 50% 50% 50%  / 60% 60% 40% 40%;
+    /* /前是横轴，/后是竖轴 */
+}
+
+
+/* 太极阴阳图 我的方法开始*/
+/* 我的方法是外面一个大圆，然后
+左右两半部分的黑白色用伪元素，
+阴阳小黑白鱼用另外的div */
+.taiji {
+    width: 200px;
+    height: 200px;
+    margin: 100px auto;
+    border-radius: 50%;
+    position: relative;
+    animation: goess 2s linear infinite;
+}
+
+.taiji:hover {
+    animation-play-state: paused;
+}
+
+.taiji::before {
+    content: "";
+    width: 100px;
+    height: 200px;
+    background-color: #000;
+    border-radius: 100px 0 0 100px;
+    position: absolute;
+}
+.taiji::after {
+    content: "";
+    width: 100px;
+    height: 200px;
+    background-color: #fff;
+    border-radius: 0px 100px 100px 0px;
+    position: absolute;
+    left: 100px;
+}
+.hei {
+    width: 100px;
+    height: 100px;
+    background: #000;
+    position: absolute;
+    top:0;
+    left: 50%;
+    transform: translatex(-50%);
+    z-index: 2;
+    border-radius: 50%;
+}
+.taiji .hei .xiaohei {
+    width: 25px;
+    height: 25px;
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top:50%;
+    /* transform: translatey(50%);  不知道为什么没有执行 */
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 3;
+}
+.bai {
+    width: 100px;
+    height: 100px;
+    background: #fff;
+    position: absolute;
+    bottom:0;
+    left: 50%;
+    transform: translatex(-50%);
+    z-index: 2;
+    border-radius: 50%;
+}
+.taiji .bai .xiaobai {
+    width: 25px;
+    height: 25px;
+    background-color: #000;
+    border-radius: 50%;
+    position: absolute;
+    top:50%;
+    /* transform: translatey(-50%);  不知道为什么没有执行*/
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 3;
+}
+/* 太极阴阳图 我的方法结束*/
+
+/* 太极阴阳图 胖哥的方法开始*/
+.taiji2 {
+    width: 80px;
+    height: 180px;
+    border-radius: 50%;
+    border-left: 100px solid #000;
+    margin: 100px auto;
+    background-color: #fff;
+    position: relative;
+    animation: goess 2s linear infinite;
+}
+.taiji2:hover {
+    animation-play-state: paused;
+}
+.taiji2::before {
+    content:"";
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    padding: 15px;
+    border: 30px solid #000;
+    background-color: #fff;
+    position: absolute;
+    left: -45px;
+}
+.taiji2::after {
+    content: "";
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    padding: 15px;
+    border: 30px solid #fff;
+    background-color: #000;
+    position: absolute;
+    left: -45px;
+    bottom: 0;
+}

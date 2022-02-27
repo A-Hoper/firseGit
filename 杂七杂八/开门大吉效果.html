@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        section {
+            width: 300px;
+            height: 635px;
+            background: url(picture/牵手照.jpg) no-repeat;
+            margin: 10px auto;
+            border: 1px solid #000;
+            position: relative;
+            perspective: 1200px;
+        }
+
+        .door-l,
+        .door-r {
+            width: 50%;
+            height: 100%;
+            background-color: skyblue;
+            top: 0;
+            transition: all 0.5s;
+            position: absolute;
+        }
+
+        .door-l {
+
+            left: 0;
+            border-right: 1px solid #000;
+            transform-origin: left;
+        }
+
+        .door-r {
+
+            right: 0;
+            border-left: 1px solid #000;
+            transform-origin: right;
+        }
+
+        section:hover .door-l {
+            transform: rotateY(-150deg);
+        }
+
+        section:hover .door-r {
+            transform: rotateY(150deg);
+        }
+
+        .door-l::before,
+        .door-r::before {
+            /* display: block; */
+            content: "";
+            width: 10px;
+            height: 10px;
+            border: 1px solid #000;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .door-l::before {
+            right: 10px;
+        }
+
+        .door-r::before {
+            left: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <div class="door-l"></div>
+        <div class="door-r"></div>
+    </section>
+</body>
+
+</html>
